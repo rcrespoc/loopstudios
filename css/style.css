@@ -1,0 +1,407 @@
+:root{
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --dark-gray: hsl(0, 0%, 55%);
+  --very-dark-gray: hsl(0, 0%, 41%);
+}
+html{
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* -------------------- COMPONNTES -------------------- */
+.btn{
+  display: inline-block;
+  border: thin solid var(--black);
+  padding-top: .7rem;
+  padding-bottom: .5rem;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 2px;
+  color: var(--black);
+  font-size: .8rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  order: 2;
+}
+@media screen and (min-width: 48rem){
+  .btn{
+    order: 0;
+    margin: 0;
+    width: 70%;
+    justify-self: self-end;
+  }
+}
+
+/* -------------------- ESTILOS -------------------- */
+.header-page{
+  background-image: url(../images/mobile/image-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* height: 30rem; */
+}
+@media screen and (min-width: 48rem){
+  .header-page{
+    background-image: url(../images/desktop/image-hero.jpg);
+  }
+}
+.barra-principal{
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  transition: background-color .3s ease-in;
+}
+.header-logo > img{
+  width: 150px;
+}
+.menu-navegacion{
+  position: absolute;
+  background-color: var(--black);
+  width: calc(100% - 1rem);
+  height: calc(100vh - 5.8rem);
+  top: 5.8rem;
+  left: 0;
+  padding-left: 1rem;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-in;
+}
+.menu-navegacion a{
+  padding: .8rem 0;
+  font-size: 1.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 100;
+}
+.menu-navegacion.is-active{
+  opacity: 1;
+  pointer-events: auto;
+}
+@media screen and (min-width: 48rem){
+  .menu-btn{
+    display: none;
+  }
+  .menu-navegacion{
+    position: static;
+    height: auto;
+    opacity: 1;
+    flex-direction: row;
+    background-color: transparent;
+    pointer-events: auto;
+    justify-content: flex-end;
+  }
+  .menu-navegacion a{
+    font-size: .8rem;
+    margin-right: 1rem;
+    font-weight: 500;
+    text-transform: unset;
+  }
+  .menu-navegacion a:last-child{
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 80rem){
+  .menu-navegacion a{
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 90rem){
+  .barra-principal{
+    padding-left: 12rem;
+    padding-right: 12rem;
+  }
+}
+@media screen and (min-width: 120rem){
+  .barra-principal{
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.hero-section > .container > h1{
+  font-weight: 100;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 2.5rem;
+}
+.hero-section > .container{
+  border: thin solid var(--white);
+}
+@media screen and (min-width: 48rem){
+  .hero-section > .container{
+    width: 50%;
+    margin-left: 6rem;
+  }
+}
+@media screen and (min-width: 64rem){
+  .hero-section > .container{
+    margin-left: 8rem;
+  }
+}
+@media screen and (min-width: 80rem){
+  .hero-section > .container{
+    width: 30%;
+    margin-left: 10rem;
+  }
+}
+@media screen and (min-width: 90rem){
+  .hero-section > .container{
+    width: 40%;
+    margin-left: 12rem;
+  }
+  .hero-section > .container > h1{
+    font-size: 4rem;
+    padding: 2rem;
+  }
+  .hero-section > .container{
+    border: medium solid var(--white);
+  }
+}
+@media screen and (min-width: 120rem){
+  .hero-section{
+    padding: 10rem 0;
+  }
+  .hero-section > .container{
+    margin-left: 15rem;
+  }
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
+.header-leader > h2{
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+@media screen and (min-width: 48rem){
+  .main-content > .container{
+    width: 75%;
+  }
+  .leader-in{
+    position: relative;
+  }
+  .leader-in > img{
+    width: 70%;
+  }
+  .header-leader{
+    position: absolute;
+    width: 50%;
+    padding: 3rem 0 0 3rem;
+    right: -1rem;
+    bottom: -3rem;
+  }
+  .header-leader > p{
+    font-size: .7rem;
+    line-height: 1rem;
+  }
+}
+@media screen and (min-width: 80rem){
+  .header-leader{
+    padding: 4rem;
+    right: -9rem;
+    bottom: -4rem;
+  }
+  .header-leader > p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+@media screen and (min-width: 90rem){
+  .header-leader{
+    width: 40%;
+    right: -5rem;
+    bottom: 0rem;
+  }
+}
+@media screen and (min-width: 120rem){
+  .header-leader{
+    width: 34%;
+    right: -4rem;
+    bottom: 0rem;
+  }
+}
+
+
+.our-creations > h2{
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.our-creations-item{
+  height: 6rem;
+  position: relative;
+  margin-top: 1rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+.our-creations-item > h4{
+  font-weight: 200;
+  font-size: 1.3rem;
+  padding: 1rem;
+  position: absolute;
+  width: 40%;
+  bottom: 0;
+  color: var(--white)
+}
+.our-creations-item:first-child{
+  margin-top: 0;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-deep-earth.jpg);
+}
+.our-creations-item:nth-child(2){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-night-arcade.jpg);
+}
+.our-creations-item:nth-child(3){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-soccer-team.jpg);
+}
+.our-creations-item:nth-child(4){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-grid.jpg);
+}
+.our-creations-item:nth-child(5){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-from-above.jpg);
+}
+.our-creations-item:nth-child(6){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-pocket-borealis.jpg);
+}
+.our-creations-item:nth-child(7){
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-curiosity.jpg);
+}
+.our-creations-item:last-child{
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.568), transparent), 
+  url(../images/mobile/image-fisheye.jpg);
+}
+@media screen and (min-width: 48rem){
+  .our-creations{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 4rem;
+  }
+  .our-creations > h2{
+    grid-column: span 3;
+    justify-self: self-start;
+    align-self: center;
+  }
+  .our-creations-items{
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .our-creations-item{
+    height: 18rem;
+    margin-top: 0;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+  .our-creations-item:first-child{
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-deep-earth.jpg);
+  }
+  .our-creations-item:nth-child(2){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-night-arcade.jpg);
+  }
+  .our-creations-item:nth-child(3){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-soccer-team.jpg);
+  }
+  .our-creations-item:nth-child(4){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-grid.jpg);
+  }
+  .our-creations-item:nth-child(5){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-from-above.jpg);
+  }
+  .our-creations-item:nth-child(6){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-pocket-borealis.jpg);
+  }
+  .our-creations-item:nth-child(7){
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-curiosity.jpg);
+  }
+  .our-creations-item:last-child{
+    background-image: linear-gradient(360deg, rgba(0, 0, 0, 0.568), transparent), 
+    url(../images/desktop/image-fisheye.jpg);
+  }
+}
+@media screen and (min-width: 64rem){
+  .our-creations-item{
+    height: 25rem;
+  }
+}
+@media screen and (min-width: 90rem){
+  .our-creations-item{
+    height: 40rem;
+  }
+  .our-creations-item > h4{
+    font-size: 1.8rem;
+  }
+}
+
+/* -------------------- FOOTER -------------------- */
+.logo > img{
+  width: 150px;
+}
+.footer-nav a{
+  padding: .8rem 0;
+  color: var(--white)
+}
+.footer-sociales a{
+  font-size: 1.5rem;
+  padding: 0 .3rem;
+  color: var(--white)
+}
+.copyright > p{
+  color: var(--dark-gray);
+}
+@media screen and (min-width: 48rem){
+  footer > .container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 'logo sociales'
+    'nav copy';
+  }
+  .logo{
+    grid-area: logo;
+  }
+  .footer-nav{
+    grid-area: nav;
+  }
+  .footer-nav a{
+    margin-right: .5rem;
+  }
+  .footer-sociales{
+    grid-area: sociales;
+    justify-self: self-end;
+  }
+  .copyright{
+    grid-area: copy;
+    align-self: center;
+    justify-self: self-end;
+  }
+}
+@media screen and (min-width: 64rem){
+  .footer-nav a{
+    margin-right: 1rem;
+  }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution a{
+  color: var(--dark-gray);
+}
